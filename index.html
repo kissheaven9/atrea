@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATREA GmbH — Unternehmensgründung &amp; Investitionsprojekte in Deutschland</title>
+  <meta name="description" content="ATREA GmbH — Geschäftsentwicklung und Investitionsprojekte in Deutschland. Wir helfen ausländischen Unternehmern und Investoren, in den deutschen Markt einzutreten." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%233672f6'/%3E%3Ctext x='16' y='23' font-family='Arial' font-weight='bold' font-size='18' fill='white' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=11" />
+</head>
+<body>
+
+  <!-- ===== Навигация (одна, sticky — следует за пользователем) ===== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="#top" class="nav__logo">ATREA</a>
+      <a href="#why" class="nav__tagline" data-i18n="nav.tagline"></a>
+      <nav class="nav__tabs">
+        <a href="#entrepreneurs" class="nav__tab" data-i18n="nav.entrepreneurs"></a>
+        <a href="#investors" class="nav__tab" data-i18n="nav.investors"></a>
+        <a href="#ueber-uns" class="nav__tab" data-i18n="nav.about"></a>
+      </nav>
+      <a href="tel:" class="nav__phone" id="navPhone"></a>
+      <div class="nav__socials" id="navSocials"></div>
+      <a href="#kontakt" class="btn btn--primary nav__cta" data-i18n="nav.contact"></a>
+      <div class="lang" id="lang">
+        <button class="lang__current" id="langCurrent" aria-haspopup="true" aria-expanded="false"></button>
+        <ul class="lang__menu" id="langMenu" role="menu"></ul>
+      </div>
+      <button class="nav__burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="hero__glow"></div>
+      <div class="container hero__inner">
+        <h1 class="hero__title reveal" data-i18n="hero.h1"></h1>
+        <p class="hero__sub reveal reveal--d1" data-i18n="hero.sub"></p>
+        <a href="#kontakt" class="btn btn--dark hero__badge reveal reveal--d2" data-i18n="hero.badge"></a>
+      </div>
+      <!-- статистика -->
+      <div class="stats">
+        <div class="container stats__inner" id="stats"></div>
+      </div>
+    </section>
+
+    <!-- ===== Почему ATREA (горизонтальный скролл / свайп) ===== -->
+    <section class="why" id="why">
+      <div class="why__pin container">
+        <div class="why__aside">
+          <h2 class="why__title" id="whyTitle"></h2>
+          <div class="why__tags" id="whyTags"></div>
+          <div class="why__progress"><span id="whyProgress"></span></div>
+        </div>
+        <div class="why__viewport">
+          <div class="why__haze"></div>
+          <div class="why__track" id="whyTrack"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Вывод бизнеса (смена состояний по скроллу) ===== -->
+    <section class="biz" id="biz">
+      <div class="biz__pin">
+        <img class="biz__bg" src="assets/img/hero-building.jpg?v=7" alt="" />
+        <div class="biz__overlay"></div>
+        <div class="container biz__inner">
+          <div class="biz__panels" id="bizPanels"></div>
+          <div class="biz__dots" id="bizTabs"></div>
+          <h2 class="biz__caption" id="bizTitle"></h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Для предпринимателей ===== -->
+    <section class="cards-sec cards-sec--ent" id="entrepreneurs">
+      <div class="container">
+        <h2 class="cards-sec__title"><span class="brand">ATREA</span> <span id="entTitle"></span></h2>
+        <div class="cards-grid" id="entGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===== Для инвесторов ===== -->
+    <section class="cards-sec cards-sec--inv" id="investors">
+      <div class="container">
+        <h2 class="cards-sec__title"><span class="brand">ATREA</span> <span id="invTitle"></span></h2>
+        <div class="cards-grid" id="invGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===== Über uns / Основатель ===== -->
+    <section class="founder" id="ueber-uns">
+      <div class="container founder__inner">
+        <div class="founder__photo reveal"><img src="assets/img/founder.jpg" alt="Oleksandr Tykhomirov" /></div>
+        <div class="founder__body">
+          <span class="founder__label reveal" id="founderLabel"></span>
+          <blockquote class="founder__quote reveal reveal--d1" id="founderQuote"></blockquote>
+          <p class="founder__text reveal reveal--d2" id="founderText"></p>
+          <div class="founder__meta reveal reveal--d2">
+            <span class="founder__name" id="founderName"></span>
+            <span class="founder__role" id="founderRole"></span>
+          </div>
+          <div class="founder__tags reveal reveal--d3" id="founderTags"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Контакт: как сотрудничаем + форма ===== -->
+    <section class="contact" id="kontakt">
+      <div class="container">
+        <h2 class="contact__title reveal" id="contactTitle"></h2>
+        <p class="contact__sub reveal reveal--d1" id="contactSub"></p>
+        <div class="contact__grid">
+          <div class="contact__options" id="contactOptions"></div>
+          <form class="contact__form" id="contactForm" novalidate></form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Футер / Контакты ===== -->
+  <footer class="footer" id="footer">
+    <div class="container footer__inner">
+      <div class="footer__top">
+        <span class="footer__logo">ATREA</span>
+        <span class="footer__tag" id="footerTitle"></span>
+        <a href="#kontakt" class="btn btn--ghost" data-i18n="nav.contact"></a>
+      </div>
+      <div class="footer__contacts" id="footerContacts"></div>
+      <div class="footer__social" id="footerSocial"></div>
+      <div class="footer__bar">
+        <span class="footer__address" id="footerAddress"></span>
+        <span class="footer__legal" id="footerLegal"></span>
+      </div>
+      <div class="footer__slogan" id="footerSlogan"></div>
+    </div>
+  </footer>
+
+  <!-- Модалка-заглушка для кнопок (демо) -->
+  <div class="modal" id="modal" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__box">
+      <button class="modal__x" data-close aria-label="close">×</button>
+      <h3 class="modal__title" id="modalTitle"></h3>
+      <p class="modal__text" id="modalText"></p>
+      <a href="#kontakt" class="btn btn--primary" data-close id="modalBtn"></a>
+    </div>
+  </div>
+
+  <script src="assets/js/i18n.js?v=11"></script>
+  <script src="assets/js/app.js?v=11"></script>
+</body>
+</html>
