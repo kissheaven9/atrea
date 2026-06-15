@@ -83,6 +83,10 @@ window.ATREA = (function () {
           { title: 'Bau eines Wohnquartiers in Bayern', points: ['Grundstück 24.000 m²', 'geplante Nutzfläche 200.000 m²', 'auf dem Gelände: Seniorenheim, Apartments und Gewerbeflächen'] }
         ]
       },
+      worldmap: {
+        pre: 'Weltweit', accent: 'vernetzt',
+        sub: 'Wir verbinden internationale Unternehmen und Investoren mit dem deutschen Markt – über Grenzen hinweg.'
+      },
       founder: {
         label: 'Über uns',
         name: 'Oleksandr Tykhomirov',
@@ -168,6 +172,10 @@ window.ATREA = (function () {
           { title: 'Construction of a residential quarter in Bavaria', points: ['Plot 24,000 m²', 'planned usable area 200,000 m²', 'on site: a retirement home, apartments and commercial space'] }
         ]
       },
+      worldmap: {
+        pre: 'Globally', accent: 'connected',
+        sub: 'We connect international companies and investors with the German market – across borders.'
+      },
       founder: {
         label: 'About us',
         name: 'Oleksandr Tykhomirov',
@@ -252,6 +260,10 @@ window.ATREA = (function () {
           { title: 'Открытие завода', points: ['Открытие завода по производству готовых высокотехнологичных компонентов дома', 'Рентабельность 3 года'] },
           { title: 'Строительство жилого квартала в Баварии', points: ['Участок 24 000 м²', 'Запланированная полезная площадь 200 000 м²', 'На участке: дом престарелых, апартаменты и коммерческие помещения'] }
         ]
+      },
+      worldmap: {
+        pre: 'По всему миру', accent: 'на связи',
+        sub: 'Соединяем международные компании и инвесторов с немецким рынком — поверх границ.'
       },
       founder: {
         label: 'О нас',

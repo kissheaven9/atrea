@@ -91,6 +91,13 @@
         </div>
       </article>`).join('');
 
+    // карта мира — международная связность
+    const wm = t.worldmap;
+    $('#wmPre').textContent = wm.pre;
+    $('#wmAccent').innerHTML = [...wm.accent].map((ch, i) =>
+      `<span style="--ld:${(i * 0.04).toFixed(2)}s">${ch === ' ' ? '&nbsp;' : esc(ch)}</span>`).join('');
+    $('#wmSub').textContent = wm.sub;
+
     // основатель / Über uns
     const fo = t.founder;
     $('#founderLabel').textContent = fo.label;
