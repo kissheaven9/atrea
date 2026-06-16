@@ -404,35 +404,48 @@ ul { margin: 0; padding: 0; list-style: none; }
 
   .cards-grid { grid-template-columns: 1fr; }
 
+  /* Hero: свечение выше и крупнее, чтобы белый заголовок читался */
+  .hero__glow { left: 50%; top: -120px; transform: translateX(-50%); width: 170%; height: 680px; filter: blur(45px); }
+  .hero__inner { padding-top: 120px; padding-bottom: 48px; }
+
+  /* меньше расстояния между картой и «Почему ATREA» */
+  .worldmap { padding: 32px 0 14px; }
+
   /* Почему ATREA: не пиннится, а свайпается пальцем */
   .why { height: auto !important; }
-  .why__pin { position: static; min-height: 0; height: auto; flex-direction: column; align-items: stretch; gap: 22px; padding: 60px 0; }
+  .why__pin { position: static; min-height: 0; height: auto; flex-direction: column; align-items: stretch; gap: 20px; padding: 40px 18px; }
   .why__aside { flex: none; }
   .why__haze { display: none; }
-  .why__viewport { overflow: visible; align-self: stretch; display: block; }
+  .why__viewport { overflow: visible; align-self: stretch; display: block; margin: 0 -18px; }
   .why__track {
-    overflow-x: auto; scroll-snap-type: x mandatory; padding: 8px 0 18px;
+    overflow-x: auto; scroll-snap-type: x mandatory; padding: 8px 18px 8px;
     -webkit-overflow-scrolling: touch; transform: none !important; gap: 16px;
+    scrollbar-width: none; -ms-overflow-style: none;
   }
-  .why__track::-webkit-scrollbar { height: 0; }
+  .why__track::-webkit-scrollbar { display: none; width: 0; height: 0; }
   .why-card { flex: 0 0 80%; scroll-snap-align: center; min-height: 0; }
   .why-card__img { height: 180px; }
-  .why__progress { display: none; }
+  .why__progress { display: none !important; }
 
-  /* Вывод бизнеса: не пиннится, состояния переключаются табами */
+  /* Вывод бизнеса (mobile): фото отдельно сверху, текст ниже чёрным на белом */
   .biz { height: auto !important; }
-  .biz__pin { position: static; height: auto; min-height: 0; padding: 56px 0; }
-  .biz__bg { position: absolute; }
-  .biz__inner { height: auto; display: flex; flex-direction: column; }
-  .biz__caption { position: static; max-width: none; margin: 0 0 20px; order: -2; }
-  .biz__panels { position: static; transform: none; width: auto; min-height: 230px; order: 0; }
+  .biz__pin { position: static; height: auto; min-height: 0; padding: 48px 0; display: flex; flex-direction: column; }
+  .biz__bg { position: static; order: 0; width: calc(100% - 36px); margin: 0 18px; height: 210px; object-fit: cover; border-radius: 16px; }
+  .biz__overlay { display: none; }
+  .biz__inner { height: auto; display: flex; flex-direction: column; color: var(--ink); order: 1; margin-top: 22px; }
+  .biz__caption { position: static; color: var(--ink); max-width: none; margin: 0 0 18px; order: -2; text-shadow: none; }
+  .biz__panels { position: static; transform: none; width: auto; min-height: 0; order: 0; }
   .biz__panel { position: relative; display: none; }
   .biz__panel.is-active { display: block; }
-  /* точки → текстовые табы */
+  .biz__panel h3 { color: var(--ink); text-shadow: none; }
+  .biz__panel li { color: var(--ink-2); text-shadow: none; }
+  .biz__panel li::before { background: var(--blue); box-shadow: none; }
+  /* точки → текстовые табы (на белом) */
   .biz__dots { position: static; flex-wrap: wrap; gap: 8px; order: -1; margin-bottom: 20px; }
-  .biz__dot { width: auto; height: auto; border-radius: 999px; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.22); padding: 9px 16px; }
+  .biz__dot { width: auto; height: auto; border-radius: 999px; background: #eef1f6; border: 1px solid transparent; padding: 9px 16px; }
   .biz__dot.is-active { width: auto; background: var(--blue); border-color: var(--blue); }
-  .biz__dot span { position: static; width: auto; height: auto; clip: auto; overflow: visible; font-size: 13px; font-weight: 600; color: #fff; }
+  .biz__dot span { position: static; width: auto; height: auto; clip: auto; overflow: visible; font-size: 13px; font-weight: 600; color: var(--ink); }
+  .biz__dot.is-active span { color: #fff; }
 
   .cards-sec { padding: 56px 0; }
   .founder { padding: 56px 0; }
@@ -442,7 +455,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   .contact__grid { grid-template-columns: 1fr; gap: 24px; }
   .contact__form { grid-template-columns: 1fr; padding: 22px; }
   .field--full, .field { grid-column: auto; }
-  .footer__inner { padding: 28px; margin: 0 14px 24px; }
+  .footer__inner { padding: 28px; margin: 0 0 24px; }
   .fcontact { min-width: 0; flex: 1 1 100%; }
   .footer__bar { flex-direction: column; align-items: flex-start; }
 }
