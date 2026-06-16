@@ -20,11 +20,7 @@ window.ATREA = (function () {
       { icon: 'wa-participation.jpg' }
     ],
     ent: [{ img: 'ent-service.jpg' }, { img: 'ent-production.jpg' }, { img: 'ent-it.jpg' }],
-    inv: [
-      { img: 'inv-datacenter.png', price: '10.000.000 EUR' },
-      { img: 'inv-factory.png', price: '20.000.000 EUR' },
-      { img: 'inv-construction.png', price: '3.000.000 EUR' }
-    ]
+    inv: [{ img: 'inv-datacenter.png' }, { img: 'inv-factory.png' }, { img: 'inv-construction.png' }]
   };
 
   // ---- тексты по языкам ----
@@ -75,12 +71,13 @@ window.ATREA = (function () {
       },
       inv: {
         title: 'Für Investoren',
-        btn: 'Mehr erfahren',
-        from: 'ab',
+        btn: 'Investitionsmöglichkeiten besprechen',
+        onRequest: 'Auf Anfrage',
+        disclaimer: 'Alle Angaben dienen der unverbindlichen Information und stellen kein Angebot und keinen Prospekt im Sinne des Vermögensanlagengesetzes dar.',
         cards: [
-          { title: 'Rechenzentrum', points: ['Kauf von Grundstücken ohne Genehmigung für Rechenzentren', 'Erlangung der Genehmigung', 'Verkauf x5 nach einem Jahr'] },
-          { title: 'Werkseröffnung', points: ['Eröffnung eines Werks zur Herstellung fertiger High-Tech-Hauskomponenten', 'Rentabilität in 3 Jahren'] },
-          { title: 'Bau eines Wohnquartiers in Bayern', points: ['Grundstück 24.000 m²', 'geplante Nutzfläche 200.000 m²', 'auf dem Gelände: Seniorenheim, Apartments und Gewerbeflächen'] }
+          { title: 'Rechenzentrum', points: ['Entwicklung & Realisierung', 'Volumen und Details auf Anfrage'] },
+          { title: 'Produktionsstandort / Werkseröffnung', points: ['Standortentwicklung in Deutschland', 'Details auf Anfrage'] },
+          { title: 'Wohnquartier Bayern — DONAU HÖFE', points: ['Nachhaltiges Wohnquartier (KfW 40 / QNG)', 'Grundstück 24.000 m², Nutzfläche 200.000 m²', 'Seniorenheim, Apartments & Gewerbe', 'Mehr im persönlichen Gespräch'] }
         ]
       },
       worldmap: {
@@ -166,12 +163,13 @@ window.ATREA = (function () {
       },
       inv: {
         title: 'For investors',
-        btn: 'Learn more',
-        from: 'from',
+        btn: 'Discuss investment opportunities',
+        onRequest: 'On request',
+        disclaimer: 'All information is provided for non-binding informational purposes and does not constitute an offer or a prospectus within the meaning of the German Capital Investment Act (Vermögensanlagengesetz).',
         cards: [
-          { title: 'Data center', points: ['Purchase of unpermitted land for data centers', 'Obtaining the permit', 'Selling at x5 within a year'] },
-          { title: 'Factory launch', points: ['Opening a plant producing ready high-tech house components', 'Profitability in 3 years'] },
-          { title: 'Construction of a residential quarter in Bavaria', points: ['Plot 24,000 m²', 'planned usable area 200,000 m²', 'on site: a retirement home, apartments and commercial space'] }
+          { title: 'Data center', points: ['Development & realisation', 'Volume and details on request'] },
+          { title: 'Production site / Factory launch', points: ['Site development in Germany', 'Details on request'] },
+          { title: 'Residential quarter Bavaria — DONAU HÖFE', points: ['Sustainable residential quarter (KfW 40 / QNG)', 'Plot 24,000 m², usable area 200,000 m²', 'Retirement home, apartments & commercial', 'More in a personal meeting'] }
         ]
       },
       worldmap: {
@@ -257,12 +255,13 @@ window.ATREA = (function () {
       },
       inv: {
         title: 'Для инвесторов',
-        btn: 'Узнать больше',
-        from: 'от',
+        btn: 'Обсудить инвестиционные возможности',
+        onRequest: 'По запросу',
+        disclaimer: 'Вся информация носит необязательный информационный характер и не является офертой или проспектом в смысле Закона ФРГ об инвестициях (Vermögensanlagengesetz).',
         cards: [
-          { title: 'Data center', points: ['Покупка земли без разрешения под дата-центры', 'Получение разрешения', 'Продажа x5 через год'] },
-          { title: 'Открытие завода', points: ['Открытие завода по производству готовых высокотехнологичных компонентов дома', 'Рентабельность 3 года'] },
-          { title: 'Строительство жилого квартала в Баварии', points: ['Участок 24 000 м²', 'Запланированная полезная площадь 200 000 м²', 'На участке: дом престарелых, апартаменты и коммерческие помещения'] }
+          { title: 'Data center', points: ['Девелопмент и реализация', 'Объём и детали по запросу'] },
+          { title: 'Производственная площадка / Завод', points: ['Развитие площадки в Германии', 'Детали по запросу'] },
+          { title: 'Жилой квартал в Баварии — DONAU HÖFE', points: ['Устойчивый жилой квартал (KfW 40 / QNG)', 'Участок 24 000 м², полезная площадь 200 000 м²', 'Дом престарелых, апартаменты и коммерция', 'Подробнее при личной встрече'] }
         ]
       },
       worldmap: {

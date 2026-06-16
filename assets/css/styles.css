@@ -254,6 +254,9 @@ ul { margin: 0; padding: 0; list-style: none; }
 .pcard__foot { margin-top: auto; display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
 .pcard__price { font-weight: 700; font-size: 20px; color: var(--ink); white-space: nowrap; }
 .pcard__price small { font-size: 13px; font-weight: 500; color: var(--ink-2); }
+.pcard__price--req { font-size: 15px; font-weight: 600; color: var(--ink-2); }
+.pcard .btn { white-space: normal; text-align: center; }
+.cards-disclaimer { margin: 28px 0 0; font-size: 13px; line-height: 1.5; color: var(--ink-2); opacity: .85; max-width: 880px; }
 
 /* ============================================================
    Карта мира — международная связность

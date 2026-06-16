@@ -85,11 +85,12 @@
           <h3 class="pcard__title">${esc(c.title)}</h3>
           <ul class="pcard__list">${c.points.map(p => `<li>${esc(p)}</li>`).join('')}</ul>
           <div class="pcard__foot">
-            <span class="pcard__price"><small>${esc(t.inv.from)}</small> ${esc(STATIC.inv[i].price)}</span>
+            <span class="pcard__price pcard__price--req">${esc(t.inv.onRequest)}</span>
             <button class="btn btn--green js-cta" data-title="${esc(c.title)}">${esc(t.inv.btn)}</button>
           </div>
         </div>
       </article>`).join('');
+    $('#invDisclaimer').textContent = t.inv.disclaimer;
 
     // карта мира — международная связность
     const wm = t.worldmap;
