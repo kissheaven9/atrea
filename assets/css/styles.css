@@ -126,27 +126,11 @@ ul { margin: 0; padding: 0; list-style: none; }
    Hero
    ============================================================ */
 .hero { position: relative; overflow: hidden; }
-/* Aurora-свет (анимированное «сияние») */
-.hero__glow { position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
-.hero__glow::before, .hero__glow::after {
-  content: ""; position: absolute; inset: -45% -25%;
-  background-size: 220% 220%;
-  -webkit-mask: radial-gradient(ellipse 72% 78% at 30% 44%, #000 26%, transparent 74%);
-  mask: radial-gradient(ellipse 72% 78% at 30% 44%, #000 26%, transparent 74%);
-}
-.hero__glow::before {
-  background: repeating-linear-gradient(108deg, #2f6bf0 0%, #5b8def 11%, #6366f1 22%, #22d3ee 33%, #2f6bf0 46%);
-  filter: blur(72px); opacity: .6;
-  animation: auroraShift 17s ease-in-out infinite;
-}
-.hero__glow::after {
-  background: repeating-linear-gradient(72deg, #3672f6 0%, #38bdf8 18%, #6366f1 34%, #3672f6 50%);
-  filter: blur(90px); opacity: .4;
-  animation: auroraShift 23s ease-in-out infinite reverse;
-}
-@keyframes auroraShift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+.hero__glow {
+  position: absolute; left: -200px; top: 10px;
+  width: 1240px; height: 700px; border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(54,114,246,.95), rgba(54,114,246,.8) 40%, rgba(54,114,246,.3) 68%, rgba(54,114,246,0) 82%);
+  filter: blur(50px); z-index: 0; pointer-events: none;
 }
 .hero__inner { position: relative; z-index: 1; text-align: left; padding-top: 168px; padding-bottom: 72px; }
 .hero__title {
@@ -274,14 +258,14 @@ ul { margin: 0; padding: 0; list-style: none; }
 /* ============================================================
    Карта мира — международная связность
    ============================================================ */
-.worldmap { padding: 80px 0 90px; overflow: hidden; }
+.worldmap { padding: 56px 0 36px; overflow: hidden; }
 .worldmap__head { text-align: center; margin-bottom: 10px; }
 .worldmap__title { font-family: var(--font-display); font-weight: 800; font-size: clamp(28px, 3.2vw, 44px); letter-spacing: -.02em; margin: 0 0 12px; color: var(--ink); }
 .worldmap__accent { color: var(--blue); }
 .worldmap__accent span { display: inline-block; opacity: 0; transform: translateY(8px); animation: wmLetter .5s var(--ease) forwards; animation-delay: var(--ld, 0s); }
 @keyframes wmLetter { to { opacity: 1; transform: none; } }
 .worldmap__sub { max-width: 640px; margin: 0 auto; color: var(--ink-2); font-size: clamp(15px, 1.4vw, 18px); }
-.worldmap__wrap { position: relative; margin-top: 26px; aspect-ratio: 2 / 1; }
+.worldmap__wrap { position: relative; margin-top: 18px; aspect-ratio: 800 / 344; }
 .worldmap__dots { width: 100%; height: 100%; object-fit: contain; opacity: .9; pointer-events: none; -webkit-user-select: none; user-select: none; }
 .worldmap__lines { position: absolute; inset: 0; width: 100%; height: 100%; }
 .wm-path { stroke: url(#wmGrad); stroke-width: 1.6; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 1; }
@@ -391,7 +375,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto !important; }
   .reveal { opacity: 1 !important; transform: none !important; }
-  .hero__glow::before, .hero__glow::after, .wm-ping { animation: none !important; }
+  .wm-ping { animation: none !important; }
   .worldmap__accent span { opacity: 1 !important; transform: none !important; animation: none !important; }
   .wm-path { stroke-dashoffset: 0 !important; }
 }
