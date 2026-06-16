@@ -287,6 +287,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .founder__text { font-size: 17px; line-height: 1.65; color: var(--ink-2); margin: 0 0 22px; max-width: 620px; }
 .founder__meta { display: flex; flex-direction: column; gap: 2px; margin-bottom: 22px; }
 .founder__name { font-weight: 700; font-size: 18px; color: var(--blue); }
+.founder__typeline { display: block; margin-top: 6px; }
 .founder__quote .type { color: var(--blue); font-weight: 700; }
 .founder__quote .type-caret { display: inline-block; width: 2px; height: 1.05em; background: var(--blue); margin-left: 2px; vertical-align: -3px; animation: caretBlink 1s steps(1) infinite; }
 @keyframes caretBlink { 50% { opacity: 0; } }
