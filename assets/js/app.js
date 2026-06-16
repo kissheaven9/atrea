@@ -101,11 +101,13 @@
     // основатель / Über uns
     const fo = t.founder;
     $('#founderLabel').textContent = fo.label;
-    $('#founderQuote').textContent = fo.quote;
+    $('#founderQuotePre').textContent = fo.quotePre;
+    $('#founderQuotePost').textContent = fo.quotePost;
     $('#founderText').textContent = fo.text;
     $('#founderName').textContent = fo.name;
     $('#founderRole').textContent = fo.role;
     $('#founderTags').innerHTML = fo.tags.map(x => `<span class="founder__tag">${esc(x)}</span>`).join('');
+    startTypewriter($('#founderType'), fo.quoteCycle);
 
     // блок контактов (как сотрудничаем + форма)
     renderContact(t);
@@ -201,6 +203,39 @@
   }
 
   function langName(l) { return { de: 'Deutsch', en: 'English', ru: 'Русский' }[l]; }
+
+  /* ---------------- Печатающаяся цитата (typewriter) ---------------- */
+  const wait = ms => new Promise(r => setTimeout(r, ms));
+  let typeCancel = null;
+  function startTypewriter(el, words) {
+    if (!el || !words || !words.length) return;
+    if (typeCancel) typeCancel();
+    let cancelled = false; typeCancel = () => { cancelled = true; };
+    (async () => {
+      let wi = 0;
+      while (!cancelled) {
+        const w = words[wi];
+        for (let i = 1; i <= w.length && !cancelled; i++) { el.textContent = w.slice(0, i); await wait(70); }
+        await wait(1400);
+        for (let i = w.length; i >= 0 && !cancelled; i--) { el.textContent = w.slice(0, i); await wait(38); }
+        await wait(220);
+        wi = (wi + 1) % words.length;
+      }
+    })();
+  }
+
+  /* ---------------- Наклон фото основателя за курсором ---------------- */
+  (function tiltFounder() {
+    const box = $('.founder__photo'); if (!box) return;
+    const img = box.querySelector('img'); if (!img) return;
+    box.addEventListener('mousemove', e => {
+      const r = box.getBoundingClientRect();
+      const px = (e.clientX - r.left) / r.width - 0.5;
+      const py = (e.clientY - r.top) / r.height - 0.5;
+      img.style.transform = `perspective(720px) rotateY(${px * 16}deg) rotateX(${-py * 16}deg) scale(1.04)`;
+    });
+    box.addEventListener('mouseleave', () => { img.style.transform = ''; });
+  })();
 
   /* ---------------- Переключатель языка ---------------- */
   const langBox = $('#lang');

@@ -91,7 +91,9 @@ window.ATREA = (function () {
         label: 'Über uns',
         name: 'Oleksandr Tykhomirov',
         role: 'Geschäftsführender Gesellschafter · Gründer',
-        quote: '„Was mich antreibt, ist die Überzeugung, dass wir durch die richtigen Projekte echte Veränderung bewirken – für Menschen, für die Wirtschaft und für die Zukunft."',
+        quotePre: '„Was mich antreibt, ist die Überzeugung, dass wir durch die richtigen Projekte echte Veränderung bewirken – ',
+        quoteCycle: ['für Menschen', 'für die Wirtschaft', 'für die Zukunft'],
+        quotePost: '."',
         text: 'atrea GmbH verbindet wirtschaftlichen Sachverstand mit gesellschaftlicher Haltung. Als Gründer stehe ich persönlich für jedes Projekt, jede Partnerschaft und jeden Deal – transparent, professionell und mit Weitblick.',
         tags: ['Geschäftsentwicklung', 'Investitionsprojekte', 'Behörden & Förderung', 'Internationale Expansion']
       },
@@ -180,7 +182,9 @@ window.ATREA = (function () {
         label: 'About us',
         name: 'Oleksandr Tykhomirov',
         role: 'Managing Partner · Founder',
-        quote: '"What drives me is the conviction that the right projects create real change – for people, for the economy and for the future."',
+        quotePre: '"What drives me is the conviction that the right projects create real change – ',
+        quoteCycle: ['for people', 'for the economy', 'for the future'],
+        quotePost: '."',
         text: 'atrea GmbH combines business expertise with social responsibility. As founder, I personally stand behind every project, every partnership and every deal – transparent, professional and far-sighted.',
         tags: ['Business development', 'Investment projects', 'Authorities & funding', 'International expansion']
       },
@@ -269,7 +273,9 @@ window.ATREA = (function () {
         label: 'О нас',
         name: 'Oleksandr Tykhomirov',
         role: 'Управляющий партнёр · Основатель',
-        quote: '«Меня движет убеждение, что правильные проекты создают реальные перемены — для людей, для экономики и для будущего.»',
+        quotePre: '«Меня движет убеждение, что правильные проекты создают реальные перемены — ',
+        quoteCycle: ['для людей', 'для экономики', 'для будущего'],
+        quotePost: '.»',
         text: 'atrea GmbH соединяет деловую компетентность с социальной ответственностью. Как основатель, я лично отвечаю за каждый проект, каждое партнёрство и каждую сделку — прозрачно, профессионально и с дальним прицелом.',
         tags: ['Развитие бизнеса', 'Инвестпроекты', 'Госорганы и дотации', 'Международная экспансия']
       },
