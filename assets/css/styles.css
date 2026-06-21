@@ -259,6 +259,23 @@ ul { margin: 0; padding: 0; list-style: none; }
 .cards-disclaimer { margin: 28px 0 0; font-size: 13px; line-height: 1.5; color: var(--ink-2); opacity: .85; max-width: 880px; }
 
 /* ============================================================
+   Наши действующие проекты
+   ============================================================ */
+.projects { padding: 90px 0; }
+.projects__title { font-family: var(--font-display); font-weight: 800; font-size: clamp(30px, 3.4vw, 46px); letter-spacing: -.02em; color: var(--ink); margin: 0 0 36px; }
+.projects__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px; }
+.proj { display: flex; flex-direction: column; background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); transition: transform .3s var(--ease), box-shadow .3s var(--ease); color: inherit; }
+.proj:hover { transform: translateY(-8px); box-shadow: var(--shadow); }
+.proj__media { height: 260px; overflow: hidden; }
+.proj__media img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s var(--ease); }
+.proj:hover .proj__media img { transform: scale(1.05); }
+.proj__body { padding: 24px; display: flex; flex-direction: column; gap: 8px; }
+.proj__loc { font-size: 12px; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: .05em; }
+.proj__name { font-family: var(--font-display); font-weight: 800; font-size: 24px; letter-spacing: -.01em; color: var(--ink); margin: 0; }
+.proj__desc { font-size: 15px; color: var(--ink-2); margin: 0; }
+.proj__link { margin-top: 6px; font-weight: 600; font-size: 14px; color: var(--blue); }
+
+/* ============================================================
    Карта мира — международная связность
    ============================================================ */
 .worldmap { padding: 56px 0 36px; overflow: hidden; }
@@ -406,6 +423,9 @@ ul { margin: 0; padding: 0; list-style: none; }
   .nav__tabs.is-open, .nav__mobile.is-open { display: flex; }
 
   .cards-grid { grid-template-columns: 1fr; }
+  .projects { padding: 52px 0; }
+  .projects__grid { grid-template-columns: 1fr; gap: 18px; }
+  .proj__media { height: 200px; }
 
   /* Hero: свечение выше и крупнее, чтобы белый заголовок читался */
   .hero__glow { left: 50%; top: -120px; transform: translateX(-50%); width: 170%; height: 680px; filter: blur(45px); }

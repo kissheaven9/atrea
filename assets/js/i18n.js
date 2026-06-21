@@ -20,7 +20,11 @@ window.ATREA = (function () {
       { icon: 'wa-participation.jpg' }
     ],
     ent: [{ img: 'ent-service.jpg' }, { img: 'ent-production.jpg' }, { img: 'ent-it.jpg' }],
-    inv: [{ img: 'inv-datacenter.png' }, { img: 'inv-factory.png' }, { img: 'inv-construction.png' }]
+    inv: [{ img: 'inv-datacenter.png' }, { img: 'inv-factory.png' }, { img: 'inv-construction.png' }],
+    projects: [
+      { img: 'proj-donauhoefe.jpg', url: 'https://donauhoefe.de' },
+      { img: 'proj-apartments.jpg', url: 'https://lytnet.com' }
+    ]
   };
 
   // ---- тексты по языкам ----
@@ -49,6 +53,14 @@ window.ATREA = (function () {
           { title: 'Erfahrung', text: '15 Jahre Erfahrung schaffen ein echtes Verständnis des Systems' },
           { title: 'Langfristigkeit', text: 'An einer langfristigen Zusammenarbeit interessiert' },
           { title: 'Beteiligung', text: 'Wir beteiligen uns aktiv und praktisch an den Projekten' }
+        ]
+      },
+      projects: {
+        title: 'Unsere aktuellen Projekte',
+        visit: 'Website ansehen',
+        cards: [
+          { name: 'DONAU HÖFE', loc: 'Gundelfingen a. d. Donau, Bayern', desc: 'Nachhaltiges Wohnquartier — Leben und Investieren in die Zukunft.' },
+          { name: 'Design Apartments', loc: 'Bayern', desc: 'Vermietung von Design-Apartments in Bayern.' }
         ]
       },
       biz: {
@@ -99,7 +111,7 @@ window.ATREA = (function () {
         sub: 'Wählen Sie Ihr Anliegen – wir melden uns innerhalb von 24 Stunden.',
         options: [
           { key: 'unternehmer', title: 'Für Unternehmer', desc: 'Markteintritt und Aufbau Ihres Geschäfts in Deutschland.' },
-          { key: 'investor', title: 'Für Investoren', desc: 'Projekte mit Substanz und nachhaltiger Rendite.' },
+          { key: 'investor', title: 'Für Investoren', desc: 'Projekte mit Substanz und gesellschaftlicher Wirkung.' },
           { key: 'partner', title: 'Partnerschaft', desc: 'Entwickler, Betreiber oder Planer – sprechen wir.' }
         ],
         form: { name: 'Name', company: 'Unternehmen', email: 'E-Mail', phone: 'Telefon', topic: 'Mein Anliegen',
@@ -141,6 +153,14 @@ window.ATREA = (function () {
           { title: 'Experience', text: '15 years of experience give a real understanding of the system' },
           { title: 'Long-term', text: 'Interested in long-term cooperation' },
           { title: 'Involvement', text: 'We take an active, hands-on part in the projects' }
+        ]
+      },
+      projects: {
+        title: 'Our current projects',
+        visit: 'Visit website',
+        cards: [
+          { name: 'DONAU HÖFE', loc: 'Gundelfingen a. d. Donau, Bavaria', desc: 'A sustainable residential quarter — living and investing in the future.' },
+          { name: 'Design Apartments', loc: 'Bavaria', desc: 'Rental of design apartments in Bavaria.' }
         ]
       },
       biz: {
@@ -191,7 +211,7 @@ window.ATREA = (function () {
         sub: 'Choose your request – we will get back to you within 24 hours.',
         options: [
           { key: 'unternehmer', title: 'For entrepreneurs', desc: 'Market entry and building your business in Germany.' },
-          { key: 'investor', title: 'For investors', desc: 'Projects with substance and sustainable returns.' },
+          { key: 'investor', title: 'For investors', desc: 'Projects with substance and real social impact.' },
           { key: 'partner', title: 'Partnership', desc: 'Developer, operator or planner – let us talk.' }
         ],
         form: { name: 'Name', company: 'Company', email: 'E-mail', phone: 'Phone', topic: 'My request',
@@ -233,6 +253,14 @@ window.ATREA = (function () {
           { title: 'Опыт', text: '15-летний опыт даёт реальное понимание системы' },
           { title: 'Долгосрочность', text: 'Заинтересованы в долгосрочном сотрудничестве' },
           { title: 'Участие', text: 'Практически участвуем в проектах' }
+        ]
+      },
+      projects: {
+        title: 'Наши действующие проекты',
+        visit: 'Перейти на сайт',
+        cards: [
+          { name: 'DONAU HÖFE', loc: 'Гундельфинген-на-Дунае, Бавария', desc: 'Устойчивый жилой квартал — жить и инвестировать в будущее.' },
+          { name: 'Design Apartments', loc: 'Бавария', desc: 'Аренда дизайн-апартаментов в Баварии.' }
         ]
       },
       biz: {
@@ -283,7 +311,7 @@ window.ATREA = (function () {
         sub: 'Выберите запрос — мы ответим в течение 24 часов.',
         options: [
           { key: 'unternehmer', title: 'Для предпринимателей', desc: 'Выход на рынок и запуск бизнеса в Германии.' },
-          { key: 'investor', title: 'Для инвесторов', desc: 'Проекты с реальной ценностью и доходностью.' },
+          { key: 'investor', title: 'Для инвесторов', desc: 'Проекты с реальной ценностью и значимостью.' },
           { key: 'partner', title: 'Партнёрство', desc: 'Девелопер, оператор или планировщик — обсудим.' }
         ],
         form: { name: 'Имя', company: 'Компания', email: 'E-mail', phone: 'Телефон', topic: 'Мой запрос',

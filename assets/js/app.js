@@ -92,6 +92,19 @@
       </article>`).join('');
     $('#invDisclaimer').textContent = t.inv.disclaimer;
 
+    // наши действующие проекты
+    $('#projTitle').textContent = t.projects.title;
+    $('#projGrid').innerHTML = t.projects.cards.map((c, i) => `
+      <a class="proj reveal reveal--d${i}" href="${STATIC.projects[i].url}" target="_blank" rel="noopener">
+        <div class="proj__media"><img src="${IMG}${STATIC.projects[i].img}" alt="${esc(c.name)}" loading="lazy"></div>
+        <div class="proj__body">
+          <div class="proj__loc">${esc(c.loc)}</div>
+          <h3 class="proj__name">${esc(c.name)}</h3>
+          <p class="proj__desc">${esc(c.desc)}</p>
+          <span class="proj__link">${esc(t.projects.visit)} →</span>
+        </div>
+      </a>`).join('');
+
     // карта мира — международная связность
     const wm = t.worldmap;
     $('#wmPre').textContent = wm.pre;
