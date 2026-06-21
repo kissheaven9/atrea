@@ -96,7 +96,7 @@
     $('#projTitle').textContent = t.projects.title;
     $('#projGrid').innerHTML = t.projects.cards.map((c, i) => `
       <a class="proj reveal reveal--d${i}" href="${STATIC.projects[i].url}" target="_blank" rel="noopener">
-        <div class="proj__media"><img src="${IMG}${STATIC.projects[i].img}" alt="${esc(c.name)}" loading="lazy"></div>
+        <div class="proj__media"><img src="${IMG}${STATIC.projects[i].img}?v=19" alt="${esc(c.name)}" loading="lazy"></div>
         <div class="proj__body">
           <div class="proj__loc">${esc(c.loc)}</div>
           <h3 class="proj__name">${esc(c.name)}</h3>

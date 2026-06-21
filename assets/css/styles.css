@@ -318,7 +318,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 /* ============================================================
    Контакт — «как сотрудничаем» + форма
    ============================================================ */
-.contact { position: relative; padding: 104px 0; }
+.contact { position: relative; padding: 90px 0; }
 .contact__title { font-family: var(--font-display); font-weight: 800; font-size: clamp(30px, 3.4vw, 46px); letter-spacing: -.02em; margin: 0 0 12px; color: var(--ink); }
 .contact__sub { font-size: 18px; color: var(--ink-2); margin: 0 0 44px; max-width: 560px; }
 .contact__grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 36px; align-items: start; }
@@ -423,7 +423,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   .nav__tabs.is-open, .nav__mobile.is-open { display: flex; }
 
   .cards-grid { grid-template-columns: 1fr; }
-  .projects { padding: 52px 0; }
+  .projects { padding: 56px 0; }
   .projects__grid { grid-template-columns: 1fr; gap: 18px; }
   .proj__media { height: 200px; }
 
@@ -474,7 +474,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   .founder { padding: 56px 0; }
   .founder__inner { grid-template-columns: 1fr; gap: 28px; }
   .founder__photo { max-width: 280px; }
-  .contact { padding: 60px 0; }
+  .contact { padding: 56px 0; }
   .contact__grid { grid-template-columns: 1fr; gap: 24px; }
   .contact__form { grid-template-columns: 1fr; padding: 22px; }
   .field--full, .field { grid-column: auto; }
