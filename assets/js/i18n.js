@@ -23,7 +23,7 @@ window.ATREA = (function () {
     inv: [{ img: 'inv-datacenter.png' }, { img: 'inv-factory.png' }, { img: 'inv-construction.png' }],
     projects: [
       { img: 'proj-donauhoefe.jpg', url: 'https://donauhoefe.de' },
-      { img: 'proj-apartments.jpg', url: 'https://lytnet.com' }
+      { img: 'proj-apartments.jpg', url: 'https://design-apartments.com' }
     ]
   };
 
