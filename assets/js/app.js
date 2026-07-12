@@ -13,7 +13,7 @@
 
   const social = [
     { img: 'icon-whatsapp.png', href: 'https://wa.me/4915122555558', label: 'WhatsApp' },
-    { img: 'icon-telegram.png', href: 'https://t.me/atrea', label: 'Telegram' },
+    { img: 'icon-telegram.png', href: 'https://t.me/oltyde', label: 'Telegram' },
     { img: 'icon-mail.png', href: 'mailto:' + STATIC.mail, label: 'E-Mail' }
   ];
   const statIcons = ['stat-experience.png', 'stat-projects.png', 'icon-roundabout.png', 'icon-location.png'];
@@ -160,7 +160,7 @@
   function footerSocials() {
     const items = [
       { k: 'whatsapp', href: 'https://wa.me/4915122555558' },
-      { k: 'telegram', href: 'https://t.me/atrea' },
+      { k: 'telegram', href: 'https://t.me/oltyde' },
       { k: 'mail', href: 'mailto:' + STATIC.mail },
       { k: 'linkedin', href: STATIC.linkedin },
       { k: 'instagram', href: STATIC.instagram }
