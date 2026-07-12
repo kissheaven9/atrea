@@ -168,6 +168,40 @@
     return items.map(s => `<a href="${s.href}" target="_blank" rel="noopener" aria-label="${s.k}"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">${SVG[s.k]}</svg></a>`).join('');
   }
 
+  /* ---------------- Попап телефона (Telegram / WhatsApp / Звонок) ---------------- */
+  const PHONE_TXT = {
+    de: { title: 'Kontakt aufnehmen', call: 'Anrufen' },
+    en: { title: 'Get in touch', call: 'Call' },
+    ru: { title: 'Связаться', call: 'Позвонить' }
+  };
+  const CALL_SVG = '<path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.2Z"/>';
+  const phonePopup = $('#phonePopup');
+  function openPhonePopup() {
+    const t = PHONE_TXT[lang] || PHONE_TXT.de;
+    const tel = 'tel:' + STATIC.phone.replace(/[^+\d]/g, '');
+    $('#phonePopupTitle').textContent = t.title;
+    const acts = [
+      { cls: 'tg', label: 'Telegram', href: 'https://t.me/oltyde', svg: SVG.telegram, ext: true },
+      { cls: 'wa', label: 'WhatsApp', href: 'https://wa.me/4915122555558', svg: SVG.whatsapp, ext: true },
+      { cls: 'call', label: t.call + ' · ' + STATIC.phone, href: tel, svg: CALL_SVG, ext: false }
+    ];
+    $('#phonePopupActions').innerHTML = acts.map(a =>
+      `<a class="pact pact--${a.cls}" href="${a.href}"${a.ext ? ' target="_blank" rel="noopener"' : ''}>
+        <span class="pact__ic"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">${a.svg}</svg></span>
+        <span>${esc(a.label)}</span></a>`).join('');
+    phonePopup.hidden = false;
+  }
+  phonePopup.addEventListener('click', e => { if (e.target.hasAttribute('data-pclose')) phonePopup.hidden = true; });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') phonePopup.hidden = true; });
+  $('#navPhone').addEventListener('click', e => { e.preventDefault(); openPhonePopup(); });
+  // телефон в футере тоже открывает попап
+  $('#footerContacts').addEventListener('click', e => {
+    const v = e.target.closest('.fcontact');
+    if (v && v.querySelector('.fcontact__value') && v.querySelector('.fcontact__value').textContent === STATIC.phone) {
+      e.preventDefault(); openPhonePopup();
+    }
+  });
+
   /* ---------------- Контакт: «как сотрудничаем» + форма ---------------- */
   function renderContact(t) {
     const c = t.contact;

@@ -31,11 +31,11 @@ window.ATREA = (function () {
   const TEXT = {
     de: {
       langName: 'DE',
-      nav: { tagline: 'Unternehmensgründung in Deutschland', entrepreneurs: 'Für Unternehmer', investors: 'Für Investoren', contact: 'Kontakt', about: 'Über uns' },
+      nav: { tagline: 'Unternehmensgründung in Deutschland & international', entrepreneurs: 'Für Unternehmer', investors: 'Für Investoren', contact: 'Kontakt', about: 'Über uns' },
       hero: {
         badge: 'Starten Sie Ihren Weg mit ATREA',
         h1: 'Unternehmen für Geschäftsentwicklung und Investitionsprojekte in Deutschland',
-        sub: 'Wir helfen ausländischen Unternehmern und Investoren, in den deutschen Markt einzutreten'
+        sub: 'Wir helfen ausländischen Unternehmern und Investoren beim Eintritt in den deutschen Markt – und bei der Expansion in weitere Länder'
       },
       stats: [
         { num: '15', unit: ' Jahre', label: 'Entwicklungserfahrung' },
@@ -120,7 +120,7 @@ window.ATREA = (function () {
         success: 'Vielen Dank! Wir melden uns innerhalb von 24 Stunden.'
       },
       footer: {
-        title: 'Unternehmensgründung in Deutschland',
+        title: 'Unternehmensgründung in Deutschland & international',
         phoneLabel: 'Telefon',
         mailLabel: 'E-Mail',
         address: ['atrea GmbH', 'Röntgenstr. 40a', '86368 Gersthofen'],
@@ -131,11 +131,11 @@ window.ATREA = (function () {
 
     en: {
       langName: 'EN',
-      nav: { tagline: 'Starting a business in Germany', entrepreneurs: 'For entrepreneurs', investors: 'For investors', contact: 'Contact', about: 'About' },
+      nav: { tagline: 'Starting a business in Germany & abroad', entrepreneurs: 'For entrepreneurs', investors: 'For investors', contact: 'Contact', about: 'About' },
       hero: {
         badge: 'Start your journey with ATREA',
         h1: 'A company for business development and investment projects in Germany',
-        sub: 'We help foreign entrepreneurs and investors enter the German market'
+        sub: 'We help foreign entrepreneurs and investors enter the German market – and expand into other countries'
       },
       stats: [
         { num: '15', unit: ' years', label: 'of development experience' },
@@ -220,7 +220,7 @@ window.ATREA = (function () {
         success: 'Thank you! We will get back to you within 24 hours.'
       },
       footer: {
-        title: 'Starting a business in Germany',
+        title: 'Starting a business in Germany & abroad',
         phoneLabel: 'Phone',
         mailLabel: 'E-mail',
         address: ['atrea GmbH', 'Röntgenstr. 40a', '86368 Gersthofen'],
@@ -231,11 +231,11 @@ window.ATREA = (function () {
 
     ru: {
       langName: 'RU',
-      nav: { tagline: 'Открытие бизнеса в Германии', entrepreneurs: 'Для предпринимателей', investors: 'Для инвесторов', contact: 'Связаться', about: 'О нас' },
+      nav: { tagline: 'Открытие бизнеса в Германии и за рубежом', entrepreneurs: 'Для предпринимателей', investors: 'Для инвесторов', contact: 'Связаться', about: 'О нас' },
       hero: {
         badge: 'Начать свой путь с ATREA',
         h1: 'Компания по развитию бизнеса и инвестиционных проектов в Германии',
-        sub: 'Мы помогаем иностранным предпринимателям и инвесторам выходить на немецкий рынок'
+        sub: 'Помогаем иностранным предпринимателям и инвесторам выходить на немецкий рынок — и в другие страны'
       },
       stats: [
         { num: '15', unit: ' лет', label: 'девелоперского опыта' },
@@ -320,7 +320,7 @@ window.ATREA = (function () {
         success: 'Спасибо! Мы свяжемся с вами в течение 24 часов.'
       },
       footer: {
-        title: 'Открытие бизнеса в Германии',
+        title: 'Открытие бизнеса в Германии и за рубежом',
         phoneLabel: 'Телефон',
         mailLabel: 'Почта',
         address: ['atrea GmbH', 'Röntgenstr. 40a', '86368 Gersthofen'],

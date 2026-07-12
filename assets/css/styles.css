@@ -82,7 +82,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   -webkit-mask: url(../img/logo-atrea.png) no-repeat left center / contain;
   mask: url(../img/logo-atrea.png) no-repeat left center / contain;
 }
-.nav__tagline { font-size: 13px; color: var(--ink-2); max-width: 150px; line-height: 1.25; }
+.nav__tagline { font-size: 13px; color: var(--ink-2); max-width: 188px; line-height: 1.25; }
 .nav__tabs { display: flex; gap: 8px; margin-left: 6px; }
 .nav__tab {
   font-size: 13px; font-weight: 500; color: var(--ink); padding: 8px 16px;
@@ -386,6 +386,26 @@ ul { margin: 0; padding: 0; list-style: none; }
 .modal__x { position: absolute; top: 14px; right: 16px; background: none; border: none; font-size: 26px; line-height: 1; color: var(--ink-2); cursor: pointer; }
 .modal__title { font-family: var(--font-display); font-weight: 400; font-size: 32px; margin: 0 0 12px; color: var(--ink); }
 .modal__text { color: var(--ink-2); margin: 0 0 24px; }
+
+/* Попап телефона */
+.popup { position: fixed; inset: 0; z-index: 110; display: grid; place-items: center; padding: 20px; }
+.popup[hidden] { display: none; }
+.popup__backdrop { position: absolute; inset: 0; background: rgba(20,28,55,.55); backdrop-filter: blur(4px); }
+.popup__box { position: relative; background: #fff; border-radius: var(--radius); padding: 28px; max-width: 360px; width: 100%; box-shadow: var(--shadow); animation: pop .3s var(--ease); }
+.popup__x { position: absolute; top: 12px; right: 14px; background: none; border: none; font-size: 24px; line-height: 1; color: var(--ink-2); cursor: pointer; }
+.popup__title { font-family: var(--font-display); font-weight: 800; font-size: 22px; letter-spacing: -.01em; margin: 0 0 18px; color: var(--ink); }
+.popup__actions { display: flex; flex-direction: column; gap: 10px; }
+.pact { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-radius: 14px; font-weight: 600; font-size: 15px; color: var(--ink); background: #f3f5f9; transition: transform .2s var(--ease), background .2s var(--ease); }
+.pact:hover { transform: translateY(-2px); }
+.pact__ic { width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; color: #fff; flex: none; }
+.pact--tg .pact__ic { background: #229ED9; }
+.pact--wa .pact__ic { background: #25D366; }
+.pact--call .pact__ic { background: var(--blue); }
+.pact--tg:hover { background: #e7f4fb; }
+.pact--wa:hover { background: #e7f8ee; }
+.pact--call:hover { background: #eaf0ff; }
+.nav__phone { cursor: pointer; }
+.footer__contacts .fcontact:first-child { cursor: pointer; }
 
 /* ============================================================
    Анимации появления
