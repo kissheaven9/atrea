@@ -139,6 +139,23 @@
       `<a href="impressum.html">${esc(t.footer.legal.impressum)}</a><a href="datenschutz.html">${esc(t.footer.legal.datenschutz)}</a>`;
     $('#footerSlogan').textContent = '© 2025 atrea GmbH — ' + t.footer.slogan;
 
+    // контакты на первом экране (иконки)
+    $('#heroContacts').innerHTML = heroContactsHTML();
+
+    // мобильное меню (ссылки + контакты организации)
+    $('#mmenuPanel').innerHTML = `
+      <nav class="mmenu__links">
+        <a href="#entrepreneurs">${esc(t.nav.entrepreneurs)}</a>
+        <a href="#investors">${esc(t.nav.investors)}</a>
+        <a href="#ueber-uns">${esc(t.nav.about)}</a>
+        <a href="#kontakt">${esc(t.nav.contact)}</a>
+      </nav>
+      <a class="mmenu__row" href="tel:${STATIC.phone.replace(/[^+\d]/g, '')}"><span class="mmenu__ic mmenu__ic--call"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">${CALL_SVG}</svg></span>${esc(STATIC.phone)}</a>
+      <a class="mmenu__row" href="mailto:${STATIC.mail}"><span class="mmenu__ic mmenu__ic--mail"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">${SVG.mail}</svg></span>${esc(STATIC.mail)}</a>
+      <div class="mmenu__socials">${footerSocials()}</div>
+      <div class="mmenu__addr">${t.footer.address.map(esc).join(' · ')}</div>`;
+    $$('#mmenuPanel a[href^="#"]').forEach(a => a.addEventListener('click', closeMenu));
+
     // переключатель языка
     $('#langCurrent').textContent = t.langName;
     $('#langMenu').innerHTML = langs.map(l =>
@@ -166,6 +183,16 @@
       { k: 'instagram', href: STATIC.instagram }
     ];
     return items.map(s => `<a href="${s.href}" target="_blank" rel="noopener" aria-label="${s.k}"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">${SVG[s.k]}</svg></a>`).join('');
+  }
+  // иконки контактов на первом экране: Telegram, WhatsApp, Звонок
+  function heroContactsHTML() {
+    const items = [
+      { cls: 'tg', href: 'https://t.me/oltyde', svg: SVG.telegram, ext: true, label: 'Telegram' },
+      { cls: 'wa', href: 'https://wa.me/4915122555558', svg: SVG.whatsapp, ext: true, label: 'WhatsApp' },
+      { cls: 'call', href: 'tel:' + STATIC.phone.replace(/[^+\d]/g, ''), svg: CALL_SVG, ext: false, label: 'Anrufen' }
+    ];
+    return items.map(a =>
+      `<a class="hcontact hcontact--${a.cls}" href="${a.href}"${a.ext ? ' target="_blank" rel="noopener"' : ''} aria-label="${a.label}"><svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">${a.svg}</svg></a>`).join('');
   }
 
   /* ---------------- Попап телефона (Telegram / WhatsApp / Звонок) ---------------- */
@@ -301,8 +328,13 @@
   });
 
   /* ---------------- Бургер / мобильное меню ---------------- */
-  const burger = $('#burger'), tabs = $('.nav__tabs');
-  burger.addEventListener('click', () => tabs.classList.toggle('is-open'));
+  const burger = $('#burger'), mmenu = $('#mmenu');
+  function openMenu() { mmenu.hidden = false; burger.classList.add('is-open'); burger.setAttribute('aria-expanded', 'true'); document.body.style.overflow = 'hidden'; }
+  function closeMenu() { mmenu.hidden = true; burger.classList.remove('is-open'); burger.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; }
+  burger.addEventListener('click', () => mmenu.hidden ? openMenu() : closeMenu());
+  mmenu.addEventListener('click', e => { if (e.target.hasAttribute('data-mclose')) closeMenu(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+  window.matchMedia('(min-width: 861px)').addEventListener('change', e => { if (e.matches) closeMenu(); });
 
   /* ---------------- Динамические обработчики ---------------- */
   function bindDynamic() {

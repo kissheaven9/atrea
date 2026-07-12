@@ -120,7 +120,35 @@ ul { margin: 0; padding: 0; list-style: none; }
 .lang__menu li.is-active { color: var(--blue); background: #eef3ff; }
 
 .nav__burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; }
-.nav__burger span { width: 24px; height: 2px; background: var(--ink); border-radius: 2px; transition: .3s; }
+.nav__burger span { width: 24px; height: 2px; background: var(--ink); border-radius: 2px; transition: .3s var(--ease); }
+.nav__burger.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav__burger.is-open span:nth-child(2) { opacity: 0; }
+.nav__burger.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Мобильное меню (burger → выпадающая панель с контактами) */
+.mmenu { position: fixed; inset: 0; z-index: 55; }
+.mmenu[hidden] { display: none; }
+.mmenu__backdrop { position: absolute; inset: 0; background: rgba(20,28,55,.4); backdrop-filter: blur(2px); }
+.mmenu__panel { position: absolute; top: var(--nav-h); left: 0; right: 0; max-width: none; background: #fff; box-shadow: 0 22px 44px rgba(0,0,0,.16); border-radius: 0 0 22px 22px; padding: 16px 18px 22px; animation: mmenuDrop .25s var(--ease); }
+@keyframes mmenuDrop { from { opacity: 0; transform: translateY(-14px); } to { opacity: 1; transform: none; } }
+.mmenu__links { display: flex; flex-direction: column; margin-bottom: 6px; }
+.mmenu__links a { padding: 14px 4px; font-weight: 600; font-size: 17px; color: var(--ink); border-bottom: 1px solid #eef1f5; }
+.mmenu__row { display: flex; align-items: center; gap: 12px; padding: 12px 4px; font-weight: 600; font-size: 15px; color: var(--ink); }
+.mmenu__ic { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; color: #fff; flex: none; }
+.mmenu__ic--call { background: var(--blue); }
+.mmenu__ic--mail { background: var(--ink-2); }
+.mmenu__socials { display: flex; gap: 10px; margin: 12px 4px 12px; }
+.mmenu__socials a { width: 42px; height: 42px; border-radius: 50%; background: #eef1f6; display: grid; place-items: center; color: var(--ink); transition: .2s var(--ease); }
+.mmenu__socials a:hover, .mmenu__socials a:active { background: var(--blue); color: #fff; }
+.mmenu__addr { padding: 0 4px; font-size: 13px; color: var(--ink-2); }
+
+/* Контакты на первом экране (иконки) */
+.hero__contacts { display: none; gap: 12px; margin-top: 24px; }
+.hcontact { width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; color: #fff; transition: transform .2s var(--ease); box-shadow: 0 6px 16px rgba(0,0,0,.12); }
+.hcontact--tg { background: #229ED9; }
+.hcontact--wa { background: #25D366; }
+.hcontact--call { background: var(--blue); }
+.hcontact:hover, .hcontact:active { transform: translateY(-2px); }
 
 /* ============================================================
    Hero
@@ -439,8 +467,8 @@ ul { margin: 0; padding: 0; list-style: none; }
   .nav__inner { gap: 12px; }
   .nav__logo { margin-right: auto; }
 
-  /* мобильное меню */
-  .nav__tabs.is-open, .nav__mobile.is-open { display: flex; }
+  /* контакты на первом экране — только мобайл */
+  .hero__contacts { display: flex; }
 
   .cards-grid { grid-template-columns: 1fr; }
   .projects { padding: 56px 0; }
