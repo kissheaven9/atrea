@@ -8,8 +8,10 @@
   const el = (tag, cls, html) => { const n = document.createElement(tag); if (cls) n.className = cls; if (html != null) n.innerHTML = html; return n; };
   const esc = (s) => String(s).replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
 
-  let lang = localStorage.getItem('atrea_lang');
+  const urlLang = new URLSearchParams(location.search).get('lang');
+  let lang = (urlLang && langs.includes(urlLang)) ? urlLang : localStorage.getItem('atrea_lang');
   if (!langs.includes(lang)) lang = defaultLang;
+  if (urlLang && langs.includes(urlLang)) localStorage.setItem('atrea_lang', urlLang);
 
   const social = [
     { img: 'icon-whatsapp.png', href: 'https://wa.me/4915122555558', label: 'WhatsApp' },
@@ -323,6 +325,7 @@
   $('#langMenu').addEventListener('click', e => {
     const li = e.target.closest('[data-lang]'); if (!li) return;
     lang = li.dataset.lang; localStorage.setItem('atrea_lang', lang);
+    history.replaceState(null, '', '?lang=' + lang);
     langBox.classList.remove('is-open');
     render();
   });
