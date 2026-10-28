@@ -14,7 +14,7 @@
   if (urlLang && langs.includes(urlLang)) localStorage.setItem('atrea_lang', urlLang);
 
   const social = [
-    { img: 'icon-whatsapp.png', href: 'https://wa.me/4915122555558', label: 'WhatsApp' },
+    { img: 'icon-whatsapp.png', href: 'https://wa.me/491745893955', label: 'WhatsApp' },
     { img: 'icon-telegram.png', href: 'https://t.me/oltyde', label: 'Telegram' },
     { img: 'icon-mail.png', href: 'mailto:' + STATIC.mail, label: 'E-Mail' }
   ];
@@ -178,7 +178,7 @@
   };
   function footerSocials() {
     const items = [
-      { k: 'whatsapp', href: 'https://wa.me/4915122555558' },
+      { k: 'whatsapp', href: 'https://wa.me/491745893955' },
       { k: 'telegram', href: 'https://t.me/oltyde' },
       { k: 'mail', href: 'mailto:' + STATIC.mail },
       { k: 'linkedin', href: STATIC.linkedin },
@@ -190,7 +190,7 @@
   function heroContactsHTML() {
     const items = [
       { cls: 'tg', href: 'https://t.me/oltyde', svg: SVG.telegram, ext: true, label: 'Telegram' },
-      { cls: 'wa', href: 'https://wa.me/4915122555558', svg: SVG.whatsapp, ext: true, label: 'WhatsApp' },
+      { cls: 'wa', href: 'https://wa.me/491745893955', svg: SVG.whatsapp, ext: true, label: 'WhatsApp' },
       { cls: 'call', href: 'tel:' + STATIC.phone.replace(/[^+\d]/g, ''), svg: CALL_SVG, ext: false, label: 'Anrufen' }
     ];
     return items.map(a =>
@@ -211,7 +211,7 @@
     $('#phonePopupTitle').textContent = t.title;
     const acts = [
       { cls: 'tg', label: 'Telegram', href: 'https://t.me/oltyde', svg: SVG.telegram, ext: true },
-      { cls: 'wa', label: 'WhatsApp', href: 'https://wa.me/4915122555558', svg: SVG.whatsapp, ext: true },
+      { cls: 'wa', label: 'WhatsApp', href: 'https://wa.me/491745893955', svg: SVG.whatsapp, ext: true },
       { cls: 'call', label: t.call + ' · ' + STATIC.phone, href: tel, svg: CALL_SVG, ext: false }
     ];
     $('#phonePopupActions').innerHTML = acts.map(a =>
