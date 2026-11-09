@@ -123,7 +123,7 @@ window.ATREA = (function () {
         title: 'Unternehmensgründung in Deutschland & international',
         phoneLabel: 'Telefon',
         mailLabel: 'E-Mail',
-        address: ['atrea GmbH', 'Röntgenstr. 40a', '86368 Gersthofen'],
+        address: ['atrea GmbH', 'Römerstraße 56c', '86368 Gersthofen'],
         slogan: 'Eine bessere Gesellschaft entsteht durch gute Taten.',
         legal: { impressum: 'Impressum', datenschutz: 'Datenschutz' }
       }
@@ -223,7 +223,7 @@ window.ATREA = (function () {
         title: 'Starting a business in Germany & abroad',
         phoneLabel: 'Phone',
         mailLabel: 'E-mail',
-        address: ['atrea GmbH', 'Röntgenstr. 40a', '86368 Gersthofen'],
+        address: ['atrea GmbH', 'Römerstraße 56c', '86368 Gersthofen'],
         slogan: 'A better society is built through good deeds.',
         legal: { impressum: 'Imprint', datenschutz: 'Privacy' }
       }
@@ -323,7 +323,7 @@ window.ATREA = (function () {
         title: 'Открытие бизнеса в Германии и за рубежом',
         phoneLabel: 'Телефон',
         mailLabel: 'Почта',
-        address: ['atrea GmbH', 'Röntgenstr. 40a', '86368 Gersthofen'],
+        address: ['atrea GmbH', 'Römerstraße 56c', '86368 Gersthofen'],
         slogan: 'Лучшее общество строится через добрые дела.',
         legal: { impressum: 'Импрессум', datenschutz: 'Конфиденциальность' }
       }
